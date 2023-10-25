@@ -19,6 +19,7 @@ var youtube = require('unblocker/examples/youtube/youtube.js')
 var app = express();
 
 function editTitle(data) {
+    console.log(data);
     if (data.contentType == 'text/html') {
         var myStream = new Transform({
             decodeStrings: false,
