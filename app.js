@@ -23,7 +23,7 @@ function editTitle(data) {
         var myStream = new Transform({
             decodeStrings: false,
             function(chunk, encoding, next) {
-                chunk = chunk.slice(0,chunk.search(/<title>/g)) + '<title>Cheddar Test 2' + chunk.slice(chunk.search(/<\/title>/g))
+                chunk = chunk.slice(0,chunk.search(/<title>/g)) + '<title>Cheddar Design' + chunk.slice(chunk.search(/<\/title>/g))
                 this.push(chunk);
                 next();
                 }
@@ -56,8 +56,6 @@ app.get("/no-js", function(req, res) {
     res.redirect(unblockerConfig.prefix + site);
 });
 
-const port = process.env.PORT || process.env.VCAP_APP_PORT || 8080;
-
-app.listen(port, function() {
+app.listen(8080, function() {
     console.log(`node unblocker process listening at http://localhost:${port}/`);
 }).on("upgrade", unblocker.onUpgrade); // onUpgrade handles websockets
