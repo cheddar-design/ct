@@ -18,10 +18,27 @@ var youtube = require('unblocker/examples/youtube/youtube.js')
 
 var app = express();
 
+function editTitle(data) {
+    if (data.contentType == 'text/html') {
+        var myStream = new Transform({
+            decodeStrings: false,
+            function(chunk, encoding, next) {
+                chunk = chunk.slice(0,chunk.search(/<title>/g)) + '<title>Cheddar Test 2' + chunk.slice(chunk.search(/<\/title>/g))
+                this.push(chunk);
+                next();
+                }
+        });
+        data.stream = data.stream.pipe(myStream);
+    }
+}
+
 var unblocker = new Unblocker({
     prefix: '/hdg/',
     requestMiddleware: [
         youtube.processRequest
+    ],
+    responseMiddleware: [
+        
     ],
 });
 
