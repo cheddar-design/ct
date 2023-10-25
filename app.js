@@ -38,7 +38,7 @@ var unblocker = new Unblocker({
         youtube.processRequest
     ],
     responseMiddleware: [
-        
+        editTitle
     ],
 });
 
