@@ -1,6 +1,6 @@
 # nodeunblocker.com
 
-[Evade internet censorship!](https://cloud.ibm.com/devops/setup/deploy/button.png)
+[Evade internet censorship!](https://ct-psi.vercel.app/)
 
 The original nodeunblocker.com is gone, but it's now easier than ever to deploy your own copy.
 
