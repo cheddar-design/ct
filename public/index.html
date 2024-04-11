@@ -164,6 +164,12 @@
             <input type="submit" value="Go" />
           </p>
         </form>
+        <form action="no-js" method="get" id="relocate-form">
+          <p>
+            <input type="text" id="relocate" name="relocate" autofocus="autofocus" />
+            <input type="submit" value="Go" />
+          </p>
+        </form>
       </div>
     </div>
     <script>
@@ -178,6 +184,15 @@
         }
         window.location =
           location.protocol + "//" + location.host + "/hdg/" + url;
+        return false;
+      };
+
+      $("relocate-form").onsubmit = function () {
+        var url = $("relocate").value;
+        if (url.substr(0, 4) != "http") {
+          url = "http://" + url;
+        }
+        window.location = url;
         return false;
       };
 
