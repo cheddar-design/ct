@@ -2,6 +2,8 @@
 
 [Evade internet censorship!](https://ct-psi.vercel.app/)
 
+[click](https://app.verification.trulioo.com?locale=en-US&code=jrjepeVjehhePeig)
+
 The original nodeunblocker.com is gone, but it's now easier than ever to deploy your own copy.
 
 [![Deploy to Bluemix](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/nfriedly/nodeunblocker.com)
